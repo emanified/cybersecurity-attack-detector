@@ -225,7 +225,6 @@ def detect_sql(user_input):
     checks = [
         ("Classic SQLi", classic_dfa, low),
         ("UNION-Based SQLi", union_dfa, low),
-        ("Comment-Based SQLi", comment_dfa, low),
         ("Boolean-Blind SQLi", bool_dfa, low),
         ("Time-Based SQLi", time_dfa, low),
         ("Stacked-Query SQLi", stack_dfa, low),
@@ -235,6 +234,8 @@ def detect_sql(user_input):
         ("Out-of-Band SQLi", oob_dfa, low),
 
         ("Hex-Encoding SQLi", hex_dfa, low),
+        # generic "--" comment check goes last so more specific variants win
+        ("Comment-Based SQLi", comment_dfa, low),
     ]
 
     for label, dfa, text in checks:

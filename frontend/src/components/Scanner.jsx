@@ -9,7 +9,7 @@ const PAYLOADS = {
   csrf: "https://bank.com/transfer?amount=9999&to=attacker",
   buffer: "A".repeat(210),
   dns: "google.com → 1.3.3.7",
-  session: "GET /dashboard?session_token=abc123&session_token=xyz999",
+  session: "GET /dashboard?session_id=a1b2c3d4e5f6&session_id=a1b2c3d4e5f6",
   xml: "John<role>admin</role>",
   sql_classic: "' OR '1'='1",
   sql_union: "' UNION SELECT username, password FROM users--",
