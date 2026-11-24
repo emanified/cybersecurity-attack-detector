@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<structure>
+    <type>fa</type>
+    <automaton>
+
+        <!-- Initial State -->
+        <state id="0" name="q0">
+            <x>100</x>
+            <y>100</y>
+            <initial/>
+        </state>
+
+        <state id="1" name="q1">
+            <x>200</x>
+            <y>100</y>
+        </state>
+
+        <state id="2" name="q2">
+            <x>300</x>
+            <y>100</y>
+        </state>
+
+        <state id="3" name="q3">
+            <x>400</x>
+            <y>100</y>
+        </state>
+
+        <state id="4" name="q4">
+            <x>500</x>
+            <y>100</y>
+        </state>
+
+        <state id="5" name="q5">
+            <x>600</x>
+            <y>100</y>
+        </state>
+
+        <state id="6" name="q6">
+            <x>700</x>
+            <y>100</y>
+        </state>
+
+        <state id="7" name="q7">
+            <x>800</x>
+            <y>100</y>
+            <final/>
+        </state>
+
+        <!-- Dead State -->
+        <state id="8" name="qdead">
+            <x>450</x>
+            <y>250</y>
+        </state>
+
+        <!-- NFA Transitions (WAITFOR) -->
+
+        <!-- W -->
+        <transition>
+            <from>0</from>
+            <to>0</to>
+            <read>W</read>
+        </transition>
+
+        <transition>
+            <from>0</from>
+            <to>1</to>
+            <read>W</read>
+        </transition>
+
+        <!-- A -->
+        <transition>
+            <from>1</from>
+            <to>1</to>
+            <read>A</read>
+        </transition>
+
+        <transition>
+            <from>1</from>
+            <to>2</to>
+            <read>A</read>
+        </transition>
+
+        <!-- I -->
+        <transition>
+            <from>2</from>
+            <to>2</to>
+            <read>I</read>
+        </transition>
+
+        <transition>
+            <from>2</from>
+            <to>3</to>
+            <read>I</read>
+        </transition>
+
+        <!-- T -->
+        <transition>
+            <from>3</from>
+            <to>3</to>
+            <read>T</read>
+        </transition>
+
+        <transition>
+            <from>3</from>
+            <to>4</to>
+            <read>T</read>
+        </transition>
+
+        <!-- F -->
+        <transition>
+            <from>4</from>
+            <to>4</to>
+            <read>F</read>
+        </transition>
+
+        <transition>
+            <from>4</from>
+            <to>5</to>
+            <read>F</read>
+        </transition>
+
+        <!-- O -->
+        <transition>
+            <from>5</from>
+            <to>5</to>
+            <read>O</read>
+        </transition>
+
+        <transition>
+            <from>5</from>
+            <to>6</to>
+            <read>O</read>
+        </transition>
+
+        <!-- R -->
+        <transition>
+            <from>6</from>
+            <to>6</to>
+            <read>R</read>
+        </transition>
+
+        <transition>
+            <from>6</from>
+            <to>7</to>
+            <read>R</read>
+        </transition>
+
+        <!-- Wrong inputs to dead state -->
+        <transition>
+            <from>0</from>
+            <to>8</to>
+            <read>X</read>
+        </transition>
+
+        <transition>
+            <from>1</from>
+            <to>8</to>
+            <read>B</read>
+        </transition>
+
+        <transition>
+            <from>2</from>
+            <to>8</to>
+            <read>C</read>
+        </transition>
+
+        <transition>
+            <from>3</from>
+            <to>8</to>
+            <read>D</read>
+        </transition>
+
+        <transition>
+            <from>4</from>
+            <to>8</to>
+            <read>E</read>
+        </transition>
+
+        <transition>
+            <from>5</from>
+            <to>8</to>
+            <read>G</read>
+        </transition>
+
+        <transition>
+            <from>6</from>
+            <to>8</to>
+            <read>H</read>
+        </transition>
+
+        <transition>
+            <from>7</from>
+            <to>8</to>
+            <read>Z</read>
+        </transition>
+
+        <!-- Dead loop -->
+        <transition>
+            <from>8</from>
+            <to>8</to>
+            <read>A</read>
+        </transition>
+
+    </automaton>
+</structure>
